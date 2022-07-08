@@ -57,7 +57,7 @@ public class IconMenu {
 					continue;
 			
 			try {
-				is = new ItemStack(Material.matchMaterial(config.getString(type + "." + icon + ".material")), 1, (short) config.getInt(type + "." + icon + ".data"));
+				is = new ItemStack(Material.matchMaterial(config.getString(type + "." + icon + ".material")), 1);
 			} catch(NullPointerException e) {
 				TownyMessaging.sendErrorMsg(player, "The material for the icon " + icon + " is invalid. OR there is an error in the configuration.");
 				TownyMessaging.sendErrorMsg(player, e.getMessage());

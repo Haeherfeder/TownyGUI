@@ -1,0 +1,29 @@
+name: TownyGUI
+main: com.andrewyunt.townygui.TownyGUI
+version: 0.17.2
+api-version: 1.18
+authors: [Andrew Yunt, Haeherfeder, Tiakin]
+description: >
+    TownyGUI plugin for Bukkit / Spigot servers.
+depend: [Towny]
+
+############################################################
+# +------------------------------------------------------+ #
+# |                 TownyGUI commands                    | #
+# +------------------------------------------------------+ #
+############################################################
+commands:
+  tgui:
+    description: Opens the interactive Towny GUI menu.
+    aliases: [townygui]
+    permission: towny.gui.open
+    
+############################################################
+# +------------------------------------------------------+ #
+# |                 TownyGUI permissions                 | #
+# +------------------------------------------------------+ #
+############################################################
+permissions:
+  towny.gui.open:
+    description: Allows you to open the Towny GUI menu.
+    default: true

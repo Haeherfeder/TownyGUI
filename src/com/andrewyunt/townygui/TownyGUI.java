@@ -50,7 +50,7 @@ public class TownyGUI extends JavaPlugin implements CommandExecutor {
 					if (sender.hasPermission("towny.gui.open")) {
 						new IconMenu((Player) sender, "Main");
 					} else {
-						TownyMessaging.sendErrorMsg(sender, "Keine Berechtigung");
+						TownyMessaging.sendErrorMsg(sender, "Insu");
 					}
 				}
 			} else {

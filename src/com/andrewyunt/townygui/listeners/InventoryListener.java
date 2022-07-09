@@ -41,7 +41,10 @@ public class InventoryListener implements Listener {
 			System.out.println("No Lore");
 			return;
 		}
-		
+		if(meta.getDisplayName().equalsIgnoreCase(" ")) {
+			event.setCancelled(true);
+			return;
+		}
 		List<String> lore = meta.getLore();
 		System.out.println(lore.get(0));
 		if (!HiddenStringUtils.hasHiddenString(lore.get(0))){

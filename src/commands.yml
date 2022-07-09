@@ -128,7 +128,7 @@ commands:
     - "Toggles fire in the plot you are standing on."
   /plot toggle mobs:
     title: "Toggle Plot Mobs"
-    material: SKULL_ITEM
+    material: SKELETON_SKULL
     lore:
     - "Toggles mobs in the plot you are standing on."
   /plot toggle pvp:
@@ -452,7 +452,7 @@ commands:
   /town toggle mobs:
     title: "Toggle Mobs"
     permission: "towny.command.town.toggle.mobs"
-    material: SKULL_ITEM
+    material: SKELETON_SKULL
     lore:
     - "Toggles town mobs on or off."
   /town toggle pvp:

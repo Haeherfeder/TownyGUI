@@ -89,7 +89,7 @@ public class IconMenu {
 			for(int slot = 0,pos = 0; slot<size; slot++) {
 				
 				Material m = null;
-				if(inv.getItem(slot).getType() != null) {
+				if(inv.getItem(slot) != null) {
 					if(pos % 3 == 2) {
 						m = Material.PURPLE_STAINED_GLASS_PANE;
 					}else if(pos % 3 == 1) {

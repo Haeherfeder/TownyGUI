@@ -37,12 +37,13 @@ public class InventoryListener implements Listener {
 		
 		ItemMeta meta = item.getItemMeta();
 		
-		if (!meta.hasLore()){
-			System.out.println("No Lore");
-			return;
-		}
 		if(meta.getDisplayName().equalsIgnoreCase(" ")) {
 			event.setCancelled(true);
+			return;
+		}
+		
+		if (!meta.hasLore()){
+			System.out.println("No Lore");
 			return;
 		}
 		List<String> lore = meta.getLore();

@@ -6,655 +6,655 @@
 commands:
 # Towny Menu commands
   /towny map:
-    title: "Towny Map"
+    title: "carte des villes"
     permission: "towny.command.towny.map"
     material: MAP
     lore:
-    - "Shows the Towny map."
+    - "Montre la carte des villes."
   /towny prices:
-    title: "Towny Prices"
+    title: "prix de Towny"
     permission: "towny.command.towny.prices"
     material: EMERALD
     lore:
-    - "Shows taxes/costs associated with running a town."
+    - "Indique les taxes/coûts associés à la gestion d'une ville."
   /towny time:
-    title: "Towny Time"
+    title: "Horaires"
     permission: "towny.command.towny.time"
     material: CLOCK
     lore:
-    - "Shows time until next new-day (tax/upkeep collection.)"
+    - "Indique le temps jusqu'au prochain jour de collecte des taxes/entretiens.)"
   /towny top residents:
-    title: "Top Residents"
+    title: "Classement des residents"
     permission: "towny.command.towny.top"
     material: PLAYER_HEAD
     lore:
-    - "Shows top residents."
+    - "Affiche le classement des résidents."
     arguments:
-      <WHERE>: "&aWhich place do you want to get the top residents from? Possible options: {all/town/nation}"
+      <WHERE>: "&aDe quel endroit voulez-vous obtenir les meilleurs résidents ? Options possibles : {all/town/nation}"
   /towny top land:
-    title: "Top Land Owners"
+    title: "Principaux propriétaires fonciers"
     permission: "towny.command.towny.top"
     material: GRASS_BLOCK
     lore:
-    - "Shows top land owners."
+    - "Montre les principaux propriétaires fonciers."
     arguments:
-      <WHERE>: "&aWhich place do you want to get the top land owners from? Possible options: {all/town/nation}"
+      <WHERE>: "&aDe quel endroit voulez-vous obtenir les meilleurs propriétaires fonciers ? Options possibles : {all/town/nation}"
   /towny universe:
-    title: "Towny Universe"
+    title: "Statistique de Towny"
     permission: "towny.command.towny.universe"
     material: GRASS_BLOCK
     lore:
-    - "Shows full Towny stats, resident/town/nation/world counts as well as townblocks claimed."
+    - "Affiche les statistiques complètes de Towny, le nombre de résidents, de villes, de nations et de pays, ainsi que les townblocks réclamés."
   /towny war stats:
     title: "Stats"
     material: ARROW
     lore:
-    - "Displays war event stats."
+    - "Affiche les statistiques des événements de guerre."
   /towny war scores:
     title: "Scores"
     material: ARROW
     lore:
-    - "Displays war event scores."
+    - "Affiche les scores des événements de guerre."
   /towny war hud:
-    title: "Toggle War Hud"
+    title: "Afficher l'interface de guerre"
     material: ARROW
     lore:
-    - "Toggles the Towny war HUD on the right side of the screen."
+    - "Active le HUD de la guerre de Towny sur le côté droit de l'écran."
 
 # Plot Menu Commands
   /plot claim:
-    title: "Claim Plot"
+    title: "Claim la parcelle"
     permission: "towny.command.plot.claim"
     material: WOODEN_AXE
     lore:
-    - "Claims the plot you are currently standing on if it is for sale."
+    - "Claim la parcelle sur laquelle vous vous trouvez actuellement si elle est à vendre."
   /plot unclaim:
     title: "Unclaim Plot"
     permission: "towny.command.plot.unclaim"
     material: FLINT_AND_STEEL
     lore:
-    - "Unclaim personally owned plots."
+    - "Retirer des parcelles vous appartenant."
   /plot forsale:
-    title: "Sell Plot"
+    title: "Vendre une parcelle"
     permission: "towny.command.plot.forsale"
     material: DIAMOND
     lore:
-    - "Sell the plot you are currently standing on."
+    - "Vendre la parcelle sur laquelle vous vous trouvez actuellement."
     arguments:
-      <PRICE>: "&aWhat price would you like to sell the plot for?"
+      <PRICE>: "&aÀ quel prix souhaitez-vous vendre la parcelle ?"
   /plot notforsale:
-    title: "Remove Plot Sale"
+    title: "Retirer la vente de la parcelle"
     permission: "towny.command.plot.notforsale"
     material: BOOK
     lore:
-    - "Takes the plot you are currently standing in off the market."
+    - "Retire du marché la parcelle sur laquelle vous vous trouvez actuellement.."
   /plot perm:
-    title: "Plot Permissions"
+    title: "Permissions de la parcelle"
     permission: "towny.command.plot.perm"
     material: OAK_SIGN
     lore:
-    - "Check the permissions of the plot you are standing on."
+    - "Vérifiez les autorisations de la parcelle sur laquelle vous vous trouvez.."
   /plot perm hud:
-    title: "Toggle Plot Permissions Hud"
+    title: "Basculer les autorisations de traçage vers le Hud"
     permission: "towny.command.plot.perm"
     material: OAK_SIGN
     lore:
-    - "Toggles the plot permissions hud on the right side of the screen."
+    - "Affiche l'interface des permissions du tracé sur le côté droit de l'écran."
   /plot set:
-    title: "Set Plot Type"
+    title: "Définir le type de tracé"
     material: BOOK
     lore:
-    - "Sets a plot to the specified plot type."
+    - "Définit un tracé avec le type de tracé spécifié."
     arguments:
-      <type>: "&aWhat plot type would you like to set the plot to? Possible options: {reset/shop/embassy/arena/inn/jail/wilds/farm}"
+      <type>: "&aQuel type de parcelle souhaitez-vous définir ? Options possibles : {reset/shop/embassy/arena/inn/jail/wilds/farm}"
   /plot set name:
-    title: "Set Plot Name"
+    title: "Définir le nom de la parcelle"
     permission: "towny.command.town.set.name"
     material: NAME_TAG
     lore:
-    - "Renames a plot, replacing the ~Unowned message if a public plot."
-    - "Personal plots display both the plot's name and owner."
+    - "Renomme une parcelle, en remplaçant le message ~Unowned si la parcelle est publique."
+    - "Les parcelles personnelles affichent à la fois le nom et le propriétaire de la parcelle."
     arguments:
-      <NAME>: "&aWhat would you like to name the plot?"
+      <NAME>: "&aComment voulez-vous nommer la parcelle ?"
   /plot toggle explosions:
-    title: "Toggle Plot Explosions"
+    title: "Activer les explosions"
     material: TNT
     lore:
-    - "Toggles explosions in the plot you are standing on."
+    - "Active les explosions dans la parcelle sur laquelle vous vous trouvez."
   /plot toggle fire:
-    title: "Toggle Plot Fire"
+    title: "Activer le feu"
     material: FLINT_AND_STEEL
     lore:
-    - "Toggles fire in the plot you are standing on."
+    - "Active le feu dans la parcelle sur laquelle vous vous trouvez."
   /plot toggle mobs:
-    title: "Toggle Plot Mobs"
+    title: "Activer les monstres"
     material: SKELETON_SKULL
     lore:
-    - "Toggles mobs in the plot you are standing on."
+    - "Active les mobs dans la parcelle sur laquelle vous vous trouvez.."
   /plot toggle pvp:
-    title: "Toggle Plot PvP"
+    title: "Activer le PvP"
     material: IRON_SWORD
     enchant_glow: true
     lore:
-    - "Toggles PvP in the plot you are standing on."
+    - "Active le PvP dans la parcelle où vous vous trouvez."
   /plot clear:
     title: "Plot Clear"
     permission: "towny.command.plot.clear"
     material: IRON_SHOVEL
     lore:
-    - "Removes list of block id�s from a plot."
-    - "&cWARNING: POTENTIAL TO CAUSE DAMAGE!"
+    - "Supprime la liste des identifiants de bloc d'un tracé."
+    - "&cAVERTISSEMENT : RISQUE POTENTIEL DE DOMMAGES !"
 
 # Resident Menu Commands
   /resident:
-    title: "My Resident"
+    title: "Mes residents"
     material: PAINTING
     lore:
-    - "Displays your Towny resident information."
+    - "Affiche les informations sur votre résident Towny."
   /resident friend add:
-    title: "Add Friend"
+    title: "Ajouter un amis"
     permission: "towny.command.resident.friend"
     material: GOLD_NUGGET
     lore:
-    - "Adds a friend to your friends list who is currently online."
+    - "Ajoute un ami à votre liste d'amis qui est actuellement en ligne."
     arguments:
-      <NAME>: "&aWho do you want to add to your friends list?"
+      <NAME>: "&aQui voulez-vous ajouter à votre liste d'amis ?"
   /resident friend remove:
-    title: "Remove Friend"
+    title: "Retirer un amis"
     permission: "towny.command.resident.friend"
     material: GHAST_TEAR
     lore:
-    - "Removes a friend from your friends list."
+    - "Supprime un ami de votre liste d'amis."
     arguments:
-      <NAME>: "&aWho do you want to remove from your friends list?"
+      <NAME>: "&aQui voulez-vous supprimer de votre liste d'amis ?"
   /resident friend clearlist:
-    title: "Clear Friends List"
+    title: "Vider la liste d'amis"
     permission: "towny.command.resident.friend"
     material: PAPER
     lore:
-    - "Removes all friends from your friends list."
+    - "Supprime tous les amis de ta liste d'amis."
   /resident list:
-    title: "List Residents Online"
+    title: "Liste des residents en ligne"
     permission: "towny.command.resident.list"
     material: BOOK
     lore:
-    - "Lists all residents currently online on the server."
+    - "Liste de tous les résidents actuellement en ligne sur le serveur."
   /resident jail paybail:
-    title: "Pay Bail"
+    title: "Payer la caution"
     permission: "towny.command.resident.jail"
     material: GOLD_INGOT
     lore:
     - "Pays your bail if you are currently in a town's jail."
   /resident spawn:
-    title: "Resident Spawn"
+    title: "Spawn des résidents"
     permission: "towny.command.resident.spawn"
     material: RED_BED
     lore:
-    - "Teleport to your bed spawn."
+    - "Téléportation vers le spawn de votre lit."
   /resident tax:
-    title: "Show Taxes"
+    title: "Afficher les taxes"
     permission: "towny.command.resident.tax"
     material: DIAMOND
     lore:
-    - "Shows your current taxes."
+    - "Indique vos impôts actuels."
   /resident toggle map:
-    title: "Toggle Map"
+    title: "Afficher la map"
     material: MAP
     lore:
-    - "Toggles the Towny map displayed in chat."
+    - "Activation/désactivation la carte de Towny dans le chat."
   /resident toggle plotborder:
-    title: "Toggle Plot Border"
+    title: "Activer les bordure de la parcelle"
     material: OAK_FENCE
     lore:
-    - "Toggles black smoke from showing while moving between town blocks."
+    - "Activation/désactivation l'affichage de la fumée noire lors des déplacements entre les blocs de la ville."
   /resident toggle townclaim:
-    title: "Toggle Claiming"
+    title: "Activer l'auto-claim"
     material: WHITE_WOOL
     lore:
-    - "Toggles automatic town block claiming on/off."
+    - "Activation/désactivation du claim automatique des blocs de ville."
 
 # Town Menu Commands
   /town:
-    title: "My Town"
+    title: "Ma ville"
     material: PAINTING
     lore:
-    - "Displays information on your town."
+    - "Affiche des informations sur votre ville."
   /town leave:
-    title: "Leave Current Town"
+    title: "Quitter la ville actuelle"
     permission: "towny.command.town.leave"
     material: GHAST_TEAR
     lore:
-    - "Removes you from the town you are currently a member of."
+    - "Vous vous retirez de la ville dont vous êtes actuellement membre.."
   /town list:
-    title: "List Towns"
+    title: "Liste des villes"
     permission: "towny.command.town.list"
     material: PAPER
     lore:
-    - "Lists all towns currently on the server."
+    - "Liste de toutes les villes actuellement sur le serveur."
   /town online:
-    title: "Display Online Town Members"
+    title: "Afficher les membres de la ville en ligne"
     material: BOOK
     lore:
-    - "Lists all members of the town who are currently online."
+    - "Liste de tous les membres de la ville qui sont actuellement en ligne."
   /town new:
-    title: "New Town"
+    title: "Nouvelle ville"
     permission: "towny.command.town.new"
     material: NAME_TAG
     lore:
-    - "Creates a new town with the specified name."
+    - "Crée une nouvelle ville avec le nom spécifié."
     arguments:
-      <NAME>: "&aWhat would you like to name your town?"
+      <NAME>: "&aQuel nom voulez-vous donner à votre ville ?"
   /town add:
-    title: "Add Resident"
+    title: "Ajouter un résident"
     permission: "towny.command.town.add"
     material: FEATHER
     lore:
-    - "Invites a resident to the town."
+    - "Invite un résident dans la ville."
   /town kick:
-    title: "Kick Resident"
+    title: "Renvoyer un résident"
     permission: "towny.command.town.kick"
     material: STICK
     lore:
-    - "Kicks a resident from the town."
+    - "Renvoyer un résident de la ville."
   /town spawn:
-    title: "Town Spawn"
+    title: "Spawn de la ville"
     permission: "towny.town.spawn.town"
     material: ENDER_PEARL
     lore:
-    - "Teleport to the town spawn."
+    - "Téléportation vers le spawn de la ville."
   /town outpost:
-    title: "Town Outpost"
+    title: "Avant-poste de la ville"
     permission: "towny.town.spawn.outpost"
     material: ENDER_PEARL
     lore:
-    - "Teleport to the town outpost."
+    - "Téléportation vers l'avant-poste de la ville."
   /town claim:
-    title: "Town Claim"
+    title: "Claim"
     permission: "towny.command.town.claim.town"
     material: RED_WOOL
     data: 14
     lore:
-    - "Claims the current town block you are standing on."
+    - "Claim la parcelle sur lequel vous vous trouvez."
   /town unclaim:
-    title: "Town Unclaim"
+    title: "Unclaim"
     permission: "towny.command.town.unclaim"
     material: OAK_FENCE
     lore:
-    - "Unclaims the current town block you are standing on."
+    - "Retirer la parcelle sur lequel vous vous trouvez."
   /town withdraw:
-    title: "Town Withdraw"
+    title: "Retirer de l'argent"
     permission: "towny.command.town.withdraw"
     material: GOLD_INGOT
     lore:
-    - "Withdraw money from the town bank."
+    - "Retirer de l'argent de la banque de la ville."
     arguments:
-      <AMOUNT>: "&aHow much do you want to withdraw from the town bank?"
+      <AMOUNT>: "&aCombien voulez-vous retirer de la banque de la ville ?"
   /town deposit:
-    title: "Town Deposit"
+    title: "Déposer de l'argent"
     permission: "towny.command.town.deposit"
     material: GOLD_INGOT
     lore:
-    - "Deposit money into the town bank."
+    - "Déposer de l'argent à la banque de la ville."
     arguments:
-      <AMOUNT>: "&aHow much do you want to deposit into the town bank?"
+      <AMOUNT>: "&aCombien voulez-vous déposer à la banque de la ville ?"
   /town buy bonus:
-    title: "Buy Bonus Blocks"
+    title: "Acheter des blocs bonus"
     permission: "towny.command.town.buy"
     material: GRASS_BLOCK
     lore:
-    - "Buy bonus town blocks for the town."
+    - "Acheter des blocs bonus pour la ville."
     arguments:
-      <AMOUNT>: "&aHow many bonus town blocks would you like to purchase?"
+      <AMOUNT>: "&aCombien de blocs de ville supplémentaires souhaitez-vous acheter ?"
   /town ranklist:
-    title: "Town Rank List"
+    title: "Liste des ranks de la ville"
     permission: "towny.command.town.ranklist"
     material: BOOK
     lore:
-    - "Displays the town's residents and their ranks."
+    - "Affiche les résidents de la ville et leur rang.."
   /town rank:
-    title: "Add/Remove Town Rank"
+    title: "Ajouter/supprimer le rank d'un resident"
     permission: "towny.command.town.rank.*"
     material: BOOK
     lore:
-    - "Add or remove a resident's town rank."
+    - "Ajouter ou supprimer le rang de ville d'un résident."
     arguments:
-      <ACTION>: "&aWhat action do you want to do? Possible options: {add/remove}"
-      <RESIDENT>: "&aWhich resident would you like to change?"
-      <RANK>: "&aWhat rank do you want to add/remove?"
+      <ACTION>: "&aQuelle action voulez-vous entreprendre ? Options possibles : {add/remove}"
+      <RESIDENT>: "&aQuel résident souhaiteriez-vous changer ?"
+      <RANK>: "&aQuel rang voulez-vous ajouter/supprimer ?"
   /town reslist:
-    title: "List Town Residents"
+    title: "Liste des residents de la ville"
     permission: "towny.command.town.reslist"
     material: PAPER
     lore: {}
   /town join:
-    title: "Join Town"
+    title: "Rejoindre une ville"
     permission: "towny.command.town.join"
     material: OAK_DOOR
     lore:
-    - "Join an open town."
+    - "Rejoindre une ville ouverte."
   /town delete:
-    title: "Delete Town"
+    title: "Supprimer votre ville"
     permission: "towny.command.town.delete"
     material: REDSTONE
     lore:
-    - "Deletes your town and sets all town blocks to wilderness."
-    - "WARNING: POTENTIAL TO CAUSE DAMAGE!"
+    - "Supprime votre ville et met tous les blocs de la ville à l'état sauvage."
+    - "AVERTISSEMENT : RISQUE POTENTIEL DE DOMMAGES !"
   /town set board:
-    title: "Set Town Board"
+    title: "Définir un message de ville"
     permission: "towny.command.town.set.board"
     material: OAK_SIGN
     lore:
-    - "Sets your town board message."
+    - "Définit le message de votre ville."
     arguments:
-      <MSG>: "&aWhat message would you like the town board to display?"
+      <MSG>: "&aQuel message souhaitez-vous que la ville affiche ?"
   /town set mayor:
-    title: "Set Town Mayor"
+    title: "Définir un maire de la ville"
     permission: "towny.command.town.set.mayor"
     material: TORCH
     lore:
-    - "Sets your town mayor."
+    - "Définit le maire de votre ville."
     arguments:
-      <MSG>: "&aWho do you want to set as your town mayor?"
+      <MSG>: "&aQui voulez-vous Définir comme maire de votre ville ?"
   /town set homeblock:
-    title: "Set Town Homeblock"
+    title: "Définir l'origine de la ville"
     permission: "towny.command.town.set.homeblock"
     material: GRASS_BLOCK
     lore:
-    - "Sets the town homeblock and spawn of your town."
+    - "Définit le bloc d'origine et le spawn de votre ville.."
   /town set spawn:
-    title: "Set Town Spawn"
+    title: "Définir le spawn de la ville"
     permission: "towny.command.town.set.spawn"
     material: ENDER_PEARL
     lore:
-    - "Sets the town spawn, must be inside the homeblock."
+    - "Définit le spawn de la ville, qui doit être à l'intérieur du bloc d'habitation."
   /town set name:
-    title: "Set Town Name"
+    title: "Définir le nom de la ville"
     permission: "towny.command.town.set.name"
     material: NAME_TAG
     lore:
-    - "Changes your town's name."
+    - "Change le nom de votre ville."
     arguments:
-      <NAME>: "&aWhat would you like to rename the town to?"
+      <NAME>: "&aComment voulez-vous renommer la ville ?"
   /town set tag:
-    title: "Set Town Tag"
+    title: "Définir une balise à la ville"
     permission: "towny.command.town.set.tag"
     material: NAME_TAG
     lore:
-    - "Changes your town's 4 character tag."
+    - "Change la balise à 4 caractères de votre ville."
     arguments:
-      <TAG>: "What would you like to change the town tag to?"
+      <TAG>: "En quoi voulez-vous changer l'étiquette de la ville ?"
   /town set outpost:
-    title: "Set Town Outpost"
+    title: "Définir l'avant-poste de la ville"
     permission: "towny.command.town.set.outpost"
     material: GRASS_BLOCK
     lore:
-    - "Sets a town block as an outpost."
+    - "Définit un bloc de ville comme un avant-poste."
   /town set jail:
-    title: "Set Town Jail"
+    title: "Définir la prison de la ville"
     permission: "towny.command.town.set.jail"
     material: IRON_BARS
     lore:
-    - "Sets town jail spawn."
+    - "Définit le spawn de la prison de la ville."
   /town set taxes:
-    title: "Set Town Taxes"
+    title: "Définir la taxe de la ville"
     permission: "towny.command.town.set.taxes"
     material: DIAMOND
     lore:
-    - "Sets the daily town tax amount for each resident."
+    - "Définit le montant quotidien de la taxe de ville pour chaque résident."
   /town set plottax:
-    title: "Set Plot Taxes"
+    title: "Définir la taxe de la parcelle"
     permission: "towny.command.town.set.plottax"
     material: DIAMOND
     lore:
-    - "Sets the amount of tax residents pay daily for each plot."
+    - "Fixe le montant de la taxe que les résidents paient quotidiennement pour chaque parcelle."
   /town set shoptax:
-    title: "Set Shop Taxes"
+    title: "Définir la taxe d'achat"
     permission: "towny.command.town.set.shoptax"
     material: DIAMOND
     lore:
-    - "Sets the amount of tax collected for each shop plot daily."
+    - "Définit le montant de la taxe collectée pour chaque parcelle de magasin quotidiennement."
   /town set embassytax:
-    title: "Set Embassy Taxes"
+    title: "Définir la tace d'ambassade"
     permission: "towny.command.town.set.embassytax"
     material: DIAMOND
     lore:
-    - "Sets the amount of tax collected from each embassy plot daily."
+    - "Définit le montant de la taxe collectée de chaque parcelle d'ambassade quotidiennement."
   /town set plotprice:
-    title: "Set Plot Price"
+    title: "Définir le prix de la parcelle"
     permission: "towny.command.town.set.plotprice"
     material: GOLD_INGOT
     lore:
-    - "Sets the default price for town plots."
+    - "Définit le prix par défaut des parcelles de la ville."
   /town set shopprice:
-    title: "Set Shop Plot Price"
+    title: "Définir le prix de la parcelle magasin"
     permission: "towny.command.town.set.shopprice"
     material: GOLD_INGOT
     lore:
-    - "Sets the default shop plot price for the town."
+    - "Définit le prix par défaut de la parcelle magasin pour la ville."
   /town set embassyprice:
-    title: "Set Embassy Plot Price"
+    title: "Définir le prix de la parcelle ambassade"
     permission: "towny.command.town.set.embassyprice"
     material: GOLD_INGOT
     lore:
-    - "Sets the default embassy plot price for the town."
+    - "Définit le prix par défaut de la parcelle ambassade pour la ville."
   /town toggle explosion:
-    title: "Toggle Explosions"
+    title: "Activer les explosions"
     permission: "towny.command.town.toggle.explosion"
     material: TNT
     lore:
-    - "Toggles town explosions on or off."
+    - "Active ou désactive les explosions de la ville."
   /town toggle fire:
-    title: "Toggle Fires"
+    title: "Activer le feu"
     permission: "towny.command.town.toggle.fire"
     material: FLINT_AND_STEEL
     lore:
-    - "Toggles town fires on or off."
+    - "Active ou désactive les feux de ville."
   /town toggle mobs:
-    title: "Toggle Mobs"
+    title: "Activer les monstres"
     permission: "towny.command.town.toggle.mobs"
     material: SKELETON_SKULL
     lore:
-    - "Toggles town mobs on or off."
+    - "Active ou désactive les monstres dans la ville."
   /town toggle pvp:
-    title: "Toggle PvP"
+    title: "Activer le pvp"
     permission: "towny.command.town.toggle.pvp"
     material: IRON_SWORD
     enchant_glow: true
     lore:
-    - "Toggles town pvp on or off."
+    - "Active ou désactive le pvp en ville."
   /town toggle public:
-    title: "Toggle Public Spawning"
+    title: "Activer le spawn publique"
     permission: "towny.command.town.toggle.public"
     material: ENDER_PEARL
     lore:
-    - "Toggles public town spawning on or off."
+    - "Active ou désactive le spawn des villes publiques."
   /town toggle taxpercent:
-    title: "Toggle Tax Percentage"
+    title: "Activer la taxe en pourcentage"
     permission: "towny.command.town.toggle.taxpercent"
     material: DIAMOND
     lore:
-    - "Toggles town tax between flat rate or percentage."
+    - "Bascule la taxe de ville en taux fixe ou en pourcentage."
   /town toggle open:
-    title: "Toggle Open Status"
+    title: "Basculer l'accès de la ville"
     permission: "towny.command.town.toggle.open"
     material: OAK_DOOR
     lore:
-    - "Toggles the town's join status between open and closed."
+    - "Fait basculer le statut d'accès de la ville entre ouvert et fermé."
   /town toggle jail:
-    title: "Toggle Jail"
+    title: "Mettre en prison"
     permission: "towny.command.town.toggle.jail"
     material: IRON_BARS
     lore:
-    - "Toggles a resident's jail status."
+    - "Changement du statut du prisonnier."
     arguments:
-      <NUMBER>: "&aWhat jail number would you like to use?"
-      <RESIDENT>: "&aWho do you want to jail?"
+      <NUMBER>: "&aQuel numéro de prison souhaitez-vous utiliser ?"
+      <RESIDENT>: "&aQui voulez-vous mettre en prison ?"
 
 # Nation Menu Commands
   /nation list:
-    title: "List Nations"
+    title: "Liste des Nations"
     permission: "towny.command.nation.list"
     material: PAPER
     lore:
-    - "Lists all nations on the server."
+    - "Liste de toutes les nations sur le serveur."
   /nation online:
-    title: "Display Online Nation Members"
+    title: "Liste les membres de la nation en ligne"
     permission: "towny.command.nation.online"
     material: BOOK
     lore:
-    - "Lists all members of the town who are currently online."
+    - "Liste de tous les membres de la nation qui sont actuellement en ligne."
   /nation leave:
-    title: "Leave Nation"
+    title: "Quitter la nation"
     permission: "towny.command.nation.leave"
     material: REDSTONE
     lore:
-    - "Removes the town from the nation."
+    - "Retire la nation de la nation."
   /nation withdraw:
-    title: "Nation Withdraw"
+    title: "Retirer de l'argent"
     permission: "towny.command.nation.withdraw"
     material: GOLD_INGOT
     lore:
-    - "Withdraw money from the nation bank."
+    - "Retirer de l'argent de la banque nationale."
     arguments:
-      <AMOUNT>: "How much do you want to withdraw from the nation bank?"
+      <AMOUNT>: "Combien voulez-vous retirer de la banque nationale ?"
   /nation deposit:
-    title: "Nation Deposit"
+    title: "déposer de l'argent'"
     permission: "towny.command.nation.deposit"
     material: GOLD_INGOT
     lore:
-    - "Deposit money into the nation bank."
+    - "Déposer de l'argent à la banque nationale."
     arguments:
-      <AMOUNT>: "How much do you want to deposit into the nation bank?"
+      <AMOUNT>: "Combien voulez-vous déposer à la banque nationale ?"
   /nation new:
-     title: "New Nation"
+     title: "Nouvelle Nation"
      permission: "towny.command.nation.new"
      material: NAME_TAG
      lore:
-     - "Creates a new town with the specified name."
+     - "Crée une nouvelle nation avec le nom spécifié."
   /nation add:
-    title: "Invite Town"
+    title: "Inviter une ville"
     permission: "towny.command.nation.add"
     material: OAK_DOOR
     lore:
-    - "Invites a town to join the nation."
+    - "Invite une ville à rejoindre la nation."
   /nation kick:
-    title: "Kick Town"
+    title: "Renvoyer une ville"
     permission: "towny.command.nation.kick"
     material: STICK
     lore:
-    - "Kicks a town from the nation."
+    - "Renvoyer une ville de la nation."
   /nation delete:
-    title: "Delete Nation"
+    title: "Supprimer votre Nation"
     permission: "towny.command.nation.delete"
     material: REDSTONE
     lore:
-    - "Deletes your nation and removes all towns."
-    - "WARNING: POTENTIAL TO CAUSE DAMAGE!"
+    - "Supprime votre nation et supprime toutes les villes."
+    - "AVERTISSEMENT : RISQUE POTENTIEL DE DOMMAGES !"
   /nation ally add:
-    title: "Add Ally"
+    title: "Ajouter un allié"
     permission: "towny.command.nation.ally"
     material: POPPY
     lore:
-    - "Forms an alliance with another nation."
+    - "Former une alliance avec une autre nation."
     arguments:
-      <NATION>: "&aWhich nation would you like to ally with?"
+      <NATION>: "&aAvec quelle nation voudriez-vous vous allier ?"
   /nation ally remove:
-    title: "Remove Ally"
+    title: "Enlever un allié"
     permission: "towny.command.nation.ally"
     material: POPPY
     lore:
-    - "Cancels an alliance with another nation."
+    - "Annule une alliance avec une autre nation."
     arguments:
-      <NATION>: "&aWhich nation would you like to cancel alliance with?"
+      <NATION>: "&aAvec quelle nation souhaitez-vous annuler votre alliance ?"
   /nation enemy add:
-    title: "Add Enemy"
+    title: "Ajouter un ennemi"
     permission: "towny.command.nation.enemy"
     material: ARROW
     lore:
-    - "Add another nation to your enemies list."
+    - "Ajoutez une autre nation à votre liste d'ennemis."
     arguments:
-      <NATION>: "&aWhich nation would you like to add as an enemy?"
+      <NATION>: "&aQuelle nation souhaitez-vous ajouter comme ennemi ?"
   /nation enemy remove:
-    title: "Remove Enemy"
+    title: "enlever un ennemi"
     permission: "towny.command.nation.enemy"
     material: ARROW
     lore:
-    - "Add another nation to your enemies list."
+    - "Retirer une nation à votre liste d'ennemis."
     arguments:
-      <NATION>: "&aWhich nation would you like to add as an enemy?"
+      <NATION>: "&aQuelle nation souhaitez-vous retirer comme ennemi ?"
   /nation rank:
-    title: "Add/Remove Nation Rank"
+    title: "Ajoute/supprime le rang Nation d'un résident"
     permission: "towny.command.nation.rank.*"
     material: BOOK
     lore:
-    - "Add or remove a resident's nation rank."
+    - "Ajouter ou supprimer le rang de nation d'un résident."
     arguments:
-      <ACTION>: "&aWhat action do you want to do? Possible options: {add/remove}"
-      <RESIDENT>: "&aWhich resident would you like to change?"
-      <RANK>: "&aWhat rank do you want to add/remove?"
+      <ACTION>: "&aQuelle action voulez-vous entreprendre ? Options possibles : {add/remove}"
+      <RESIDENT>: "&aQuel résident souhaiteriez-vous changer ?"
+      <RANK>: "&aQuel rang voulez-vous ajouter/supprimer ?"
   /nation toggle peaceful:
-    title: "Toggle Nation Peace"
+    title: "Activer la paix dans la nation"
     permission: "towny.command.nation.toggle.neutral"
     material: DANDELION
     lore:
-    - "Sets whether your nation will pay daily be peaceful."
-    - "Peace status will prevent your nation from being"
-    - "attacked during Towny war."
+    - "Détermine si votre nation paiera quotidiennement pour être en paix."
+    - "Le statut de paix empêchera votre nation d'être"
+    - "attaqué pendant la guerre d'une ville."
   /nation set king:
-    title: "Set Nation King"
+    title: "Définir le roi de la nation"
     permission: "towny.command.nation.set.king"
     material: GOLDEN_HELMET
     lore:
-    - "Sets the nation's king."
+    - "Définit le roi de la nation."
     arguments:
-      <RESIDENT>: "&aWho would you like to set as the king?"
+      <RESIDENT>: "&aQui voulez-vous mettre comme roi?"
   /nation set capital:
-    title: "Set Nation Capital"
+    title: "Définir la capitale"
     permission: "towny.command.nation.set.capitol"
     material: OAK_DOOR
     lore:
-    -  "Sets the nation's capital."
+    -  "Définit la capitale du pays."
     arguments:
-      <TOWN>: "&aWhat town would you like to set as the capital?"
+      <TOWN>: "&aQuelle ville voudriez-vous en faire une capitale ?"
   /nation set taxes:
-    title: "Set Nation Taxes"
+    title: "Définir la taxe de la nation"
     permission: "towny.command.nation.set.taxes"
     material: DIAMOND
     lore:
-    - "Sets the tax for towns within the nation."
+    - "Définit la taxe pour les villes de la nation."
     arguments:
-      <AMOUNT>: "&aHow much would you like to tax towns in the nation?"
+      <AMOUNT>: "&aDe combien voudriez-vous taxer les villes de la nation ?"
   /nation set name:
-    title: "Set Nation Name"
+    title: "Définir le nom de la nation"
     permission: "towny.command.nation.set.name"
     material: NAME_TAG
     lore:
-    - "Sets the name of the nation."
+    - "Définit le nom de la nation."
     arguments:
-      <NAME>: "&aWhat would you like to set the name of the nation to?"
+      <NAME>: "&aA quoi voudriez-vous donner le nom de la nation ?"
   /nation set title:
-    title: "Set Resident Title"
+    title: "Définir le titre d'un résident"
     permission: "towny.command.nation.set.title"
     material: NAME_TAG
     lore:
-    - "Sets a resident's title in the nation."
+    - "Définit le titre d'un résident dans la nation."
     arguments:
-      <RESIDENT>: "&aWho would you like to set the title of?"
-      <TITLE>: "&aWhat would you like to set their title to?"
+      <RESIDENT>: "&aDe qui voulez-vous mettre ce titre ?"
+      <TITLE>: "&aQuel titre voudriez-vous leur donner ?"
   /nation set surname:
-    title: "Set Resident Surname"
+    title: "Définir le surnom d'un résident"
     permission: "towny.command.nation.set.surname"
     material: NAME_TAG
     lore:
-    - "Sets a resident's surname in the nation."
+    - "Définit le surnom d'un résident dans la nation."
     arguments:
-      <RESIDENT>: "&aWho would you like to set the surname of?"
-      <SURNAME>: "&aWhat would you like to set their surname to?"
+      <RESIDENT>: "&aDe qui aimeriez-vous Définir le surnom ?"
+      <SURNAME>: "&aQuel surnom aimeriez-vous lui donner ?"
   /nation set tag:
-    title: "Set Nation Tag"
+    title: "Définir la balise de la nation"
     permission: "towny.command.nation.set.tag"
     material: NAME_TAG
     lore:
-    - "Changes your town's 4 character tag."
+    - "Change la balise à 4 caractères de votre ville."
     arguments:
-      <TAG>: "What would you like to change the nation tag to?"
+      <TAG>: "En quoi voulez-vous changer l'étiquette de la nation ?"

@@ -86,29 +86,29 @@ public class IconMenu {
 				TownyMessaging.sendErrorMsg(player, "Icon " + icon + " is configured in a slot outside of the menu. " + e.getMessage());
 				TownyMessaging.sendErrorMsg(player, "Please report this error to your server administrator.");
 			}
-			for(int slot = 0,pos = 0; slot<size; slot++) {
-				
-				Material m = null;
-				if(inv.getItem(slot) != null) {
-					if(pos % 3 == 2) {
-						m = Material.PURPLE_STAINED_GLASS_PANE;
-					}else if(pos % 3 == 1) {
-						m = Material.LIGHT_BLUE_STAINED_GLASS_PANE;
-					}else {
-						m = Material.BLUE_STAINED_GLASS_PANE;
-					}
-					pos++;
+		}
+		for(int slot = 0,pos = 0; slot<size; slot++) {
+			
+			Material m = null;
+			if(inv.getItem(slot) == null) {
+				if(pos % 3 == 2) {
+					m = Material.PURPLE_STAINED_GLASS_PANE;
+				}else if(pos % 3 == 1) {
+					m = Material.LIGHT_BLUE_STAINED_GLASS_PANE;
+				}else {
+					m = Material.BLUE_STAINED_GLASS_PANE;
 				}
-				if(m != null) {
-					ItemStack is1 = new ItemStack(m);
-					ItemMeta im = is1.getItemMeta();
-					im.setDisplayName(" ");
-					is1.setItemMeta(im);
-					inv.setItem(slot,is1);
-				}
+				pos++;
+			}
+			if(m != null) {
+				ItemStack is1 = new ItemStack(m);
+				ItemMeta im = is1.getItemMeta();
+				im.setDisplayName(" ");
+				is1.setItemMeta(im);
+				inv.setItem(slot,is1);
 			}
 		}
-		
+	
 		player.openInventory(inv);
 	}
 }

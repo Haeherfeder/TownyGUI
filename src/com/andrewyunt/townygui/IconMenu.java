@@ -22,8 +22,10 @@ public class IconMenu {
 	
 	public IconMenu(Player player, String menu) {
 		
-		commandConfig = TownyGUI.getInstance().commandConfig.getConfig();
-		menuConfig = TownyGUI.getInstance().menuConfig.getConfig();
+		String locale = player.getLocale();
+		
+		commandConfig = TownyGUI.getInstance().commandConfig.getConfig(locale);
+		menuConfig = TownyGUI.getInstance().menuConfig.getConfig(locale);
 		
 		icons = menuConfig.getConfigurationSection("menus." + menu + ".icons").getKeys(false); 
 		
@@ -36,7 +38,6 @@ public class IconMenu {
 	private void openMenu(Player player, String menu) {
 		
 		Inventory inv = Bukkit.createInventory(null, size, title);
-		
 		for (String icon : icons) {
 			ItemStack is = null;
 			String type, permission;
@@ -65,16 +66,11 @@ public class IconMenu {
 				TownyMessaging.sendErrorMsg(player, "Please report this error to your server administrator.");
 			}
 			
-			assert is != null;
 			
 			ItemMeta meta = is.getItemMeta();
 			
 			meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', config.getString(type + "." + icon + ".title")));
-			if(TownyGUI.debug)
-				System.out.println("ICON String:" + icon);
 			meta.setLore(Utils.hideStringInLore(Utils.colorizeStringList(config.getStringList(type + "." + icon + ".lore")), icon));
-			if(TownyGUI.debug)
-				System.out.println("ICON Meta:" + meta.getLore()+ "  " + meta.getLore().get(0));
 			is.setItemMeta(meta);
 			
 			if (config.getBoolean(type + "." + icon + ".enchant_glow"))
@@ -85,27 +81,6 @@ public class IconMenu {
 			} catch(ArrayIndexOutOfBoundsException e) {
 				TownyMessaging.sendErrorMsg(player, "Icon " + icon + " is configured in a slot outside of the menu. " + e.getMessage());
 				TownyMessaging.sendErrorMsg(player, "Please report this error to your server administrator.");
-			}
-		}
-		for(int slot = 0,pos = 0; slot<size; slot++) {
-			
-			Material m = null;
-			if(inv.getItem(slot) == null) {
-				if(pos % 3 == 2) {
-					m = Material.PURPLE_STAINED_GLASS_PANE;
-				}else if(pos % 3 == 1) {
-					m = Material.LIGHT_BLUE_STAINED_GLASS_PANE;
-				}else {
-					m = Material.BLUE_STAINED_GLASS_PANE;
-				}
-				pos++;
-			}
-			if(m != null) {
-				ItemStack is1 = new ItemStack(m);
-				ItemMeta im = is1.getItemMeta();
-				im.setDisplayName(" ");
-				is1.setItemMeta(im);
-				inv.setItem(slot,is1);
 			}
 		}
 	

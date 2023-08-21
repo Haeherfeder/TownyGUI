@@ -44,13 +44,12 @@ public class TownyGUI extends JavaPlugin implements CommandExecutor {
 		if (cmd.getName().equalsIgnoreCase("tgui")) {
 			if (args.length == 0) {
 				if (!(sender instanceof Player)) {
-					System.out.println("The user interface cannot be opened from the console.");
 					return true;
 				} else {
 					if (sender.hasPermission("towny.gui.open")) {
 						new IconMenu((Player) sender, "Main");
 					} else {
-						TownyMessaging.sendErrorMsg(sender, "Insu");
+						TownyMessaging.sendErrorMsg(sender, "insufficient permissions");
 					}
 				}
 			} else {

@@ -31,32 +31,20 @@ public class InventoryListener implements Listener {
 			return;
 		}
 		if (!item.hasItemMeta()){
-			System.out.println("No meta");
 			return;
 		}
 		
 		ItemMeta meta = item.getItemMeta();
 		
-		if(meta.getDisplayName().equalsIgnoreCase(" ")) {
-			event.setCancelled(true);
-			return;
-		}
-		
 		if (!meta.hasLore()){
-			System.out.println("No Lore");
 			return;
 		}
 		List<String> lore = meta.getLore();
-		System.out.println(lore.get(0));
 		if (!HiddenStringUtils.hasHiddenString(lore.get(0))){
-			if(TownyGUI.debug)
-				System.out.println("No hidden string");
 			return;
 		}
 		
 		String action = HiddenStringUtils.extractHiddenString(lore.get(0));
-		if(TownyGUI.debug)
-			System.out.println("Action: " + action);
 		boolean command;
 		
 		command = action.startsWith("/");
@@ -68,7 +56,7 @@ public class InventoryListener implements Listener {
 			
 			Set<String> arguments;
 			try {
-				arguments = TownyGUI.getInstance().commandConfig.getConfig().getConfigurationSection(
+				arguments = TownyGUI.getInstance().commandConfig.getConfig(player.getLocale()).getConfigurationSection(
 						"commands." + action + ".arguments").getKeys(false);
 			} catch (NullPointerException e) {
 				action = action.replace("/", "");

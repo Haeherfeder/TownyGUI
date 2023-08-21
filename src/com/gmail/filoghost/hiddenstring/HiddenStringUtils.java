@@ -44,12 +44,8 @@ public class HiddenStringUtils {
 	 */
 	private static String quote(String input) {
 		if (input == null) {
-			if(TownyGUI.debug)
-				System.out.println("No input text");
 			return null;
 		} else {
-			if(TownyGUI.debug)
-				System.out.println("Input encode: " + input);
 		}
 		return SEQUENCE_HEADER + input + SEQUENCE_FOOTER;
 	}

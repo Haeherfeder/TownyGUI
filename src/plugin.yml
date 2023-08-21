@@ -1,6 +1,6 @@
 name: TownyGUI
 main: com.andrewyunt.townygui.TownyGUI
-version: 0.17.10
+version: 0.18
 api-version: 1.18
 authors: [Andrew Yunt, Haeherfeder, Tiakin]
 description: >

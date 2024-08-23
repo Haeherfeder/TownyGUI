@@ -8,11 +8,11 @@
 # TownyGUI will automatically open to the main menu
 menus:
   Main:
-    title: "Main Menu"
+    title: "Menu principal"
     size: 9
     material: IRON_BARS
     lore:
-    - "&cReturn to the main menu."
+    - "&cRetourner au menu principal"
     icons:
       Towny:
         slot: 1
@@ -25,11 +25,11 @@ menus:
       Nation:
         slot: 9
   Towny:
-    title: "Towny Menu"
+    title: "Menu Towny"
     size: 27
     material: GLASS
     lore:
-    - "Towny's general functions are located here. "
+    - "les fonctionnalités générales de towny sont ici."
     icons:
       /towny map:
         slot: 1
@@ -48,11 +48,11 @@ menus:
       Main:
         slot: 27
   Plot:
-    title: "Plot Menu"
+    title: "Menu des parcelles"
     size: 36
     material: OAK_SIGN
     lore:
-    - "Manage the plot you are currently standing on."
+    - "Modifier la parcelle sur lequel vous êtes"
     icons:
       /plot claim:
         slot: 1
@@ -77,11 +77,11 @@ menus:
       Main:
         slot: 36
   Resident:
-    title: "Resident Menu"
+    title: "Profile"
     size: 27
     material: OAK_DOOR
     lore:
-    - "Manage your Towny character."
+    - "Gérez votre personnage Towny."
     icons:
       /resident:
         slot: 1
@@ -104,11 +104,11 @@ menus:
       Main:
         slot: 27
   Town:
-    title: "Town Menu"
+    title: "Menu ville"
     size: 54
     material: BOOKSHELF
     lore:
-    - "Manage your town."
+    - "Gérez votre ville."
     icons:
       /town:
         slot: 1
@@ -155,11 +155,11 @@ menus:
       Main:
         slot: 54
   Nation:
-    title: "Nation Menu"
+    title: "Menu des nations"
     size: 45
     material: ARROW
     lore:
-    - "Manage your nation."
+    - "Gérez votre nation."
     icons:
       /nation list:
         slot: 1
@@ -198,7 +198,7 @@ menus:
       Main:
         slot: 45
   Towny_War:
-    title: "Towny War Menu"
+    title: "Menu guerre de towny"
     size: 18
     permission: "towny.command.towny.war"
     material: IRON_SWORD
@@ -214,7 +214,7 @@ menus:
       Towny:
         slot: 18
   Town_Set:
-    title: "Town Set Menu"
+    title: "Paramètre de la ville"
     size: 45
     material: OAK_BUTTON
     lore: {}
@@ -252,7 +252,7 @@ menus:
       Town:
         slot: 45
   Town_Toggle:
-    title: "Town Toggle Menu"
+    title: "Paramètre toggle de la ville"
     size: 27
     material: LEVER
     lore: {}
@@ -276,7 +276,7 @@ menus:
       Town:
         slot: 27
   Nation_Set:
-    title: "Nation Set Menu"
+    title: "Paramètre de la nation"
     size: 27
     material: OAK_BUTTON
     lore: {}
@@ -298,7 +298,7 @@ menus:
       Nation:
         slot: 27
   Plot_Toggle:
-    title: "Plot Toggle Menu"
+    title: "Paramètre toggle de la ville"
     size: 18
     material: LEVER
     lore: {}
@@ -314,7 +314,7 @@ menus:
       Plot:
         slot: 18
   Resident_Toggle:
-    title: "Resident Toggle Menu"
+    title: "Paramètre du Profile"
     size: 18
     material: LEVER
     lore: {}

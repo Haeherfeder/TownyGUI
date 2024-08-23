@@ -1,6 +1,5 @@
 package com.andrewyunt.townygui.utilities;
 
-import com.andrewyunt.townygui.TownyGUI;
 import com.gmail.filoghost.hiddenstring.HiddenStringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -25,11 +24,7 @@ public class Utils {
 	}
 	
 	public static List<String> colorizeStringList(List<String> input) {
-		if(TownyGUI.debug)
-			System.out.println("Input" + input);
 		List<String> colorized = input.stream().map(line -> ChatColor.translateAlternateColorCodes('&', line)).collect(Collectors.toList());
-		if(TownyGUI.debug)
-			System.out.println("Colorized" + colorized);
 		return colorized;
 	}
 	

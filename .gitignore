@@ -97,3 +97,5 @@ local.properties
 # Code Recommenders
 .recommenders/
 src/META-INF/MANIFEST.MF
+/target/
+/build.bat

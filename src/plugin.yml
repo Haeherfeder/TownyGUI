@@ -1,7 +1,8 @@
 name: TownyGUI
 main: com.andrewyunt.townygui.TownyGUI
-version: 0.17.1
-author: Andrew Yunt
+version: 0.18
+api-version: 1.18
+authors: [Andrew Yunt, Haeherfeder, Tiakin]
 description: >
     TownyGUI plugin for Bukkit / Spigot servers.
 depend: [Towny]

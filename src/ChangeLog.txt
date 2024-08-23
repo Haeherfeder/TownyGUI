@@ -30,3 +30,9 @@ v0.16:
 v0.17:
 	Add support for Minecraft versions 1.7.9 or higher
 	Major code cleanup
+v0.18:
+	Changed version to 1.18.2
+	Code cleanup
+	Added french translation based on their locale
+	Added support to other translation based on locale
+	Changed Configuration to support other languages

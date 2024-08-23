@@ -22,8 +22,10 @@ public class IconMenu {
 	
 	public IconMenu(Player player, String menu) {
 		
-		commandConfig = TownyGUI.getInstance().commandConfig.getConfig();
-		menuConfig = TownyGUI.getInstance().menuConfig.getConfig();
+		String locale = player.getLocale();
+		
+		commandConfig = TownyGUI.getInstance().commandConfig.getConfig(locale);
+		menuConfig = TownyGUI.getInstance().menuConfig.getConfig(locale);
 		
 		icons = menuConfig.getConfigurationSection("menus." + menu + ".icons").getKeys(false); 
 		
@@ -36,7 +38,6 @@ public class IconMenu {
 	private void openMenu(Player player, String menu) {
 		
 		Inventory inv = Bukkit.createInventory(null, size, title);
-		
 		for (String icon : icons) {
 			ItemStack is = null;
 			String type, permission;
@@ -50,6 +51,7 @@ public class IconMenu {
 				type = "menus";
 			}
 			
+			
 			permission = config.getString(type + "." + icon + ".permission");
 			
 			if (!(permission == null))
@@ -57,23 +59,18 @@ public class IconMenu {
 					continue;
 			
 			try {
-				is = new ItemStack(Material.matchMaterial(config.getString(type + "." + icon + ".material")), 1, (short) config.getInt(type + "." + icon + ".data"));
+				is = new ItemStack(Material.matchMaterial(config.getString(type + "." + icon + ".material")), 1);
 			} catch(NullPointerException e) {
 				TownyMessaging.sendErrorMsg(player, "The material for the icon " + icon + " is invalid. OR there is an error in the configuration.");
 				TownyMessaging.sendErrorMsg(player, e.getMessage());
 				TownyMessaging.sendErrorMsg(player, "Please report this error to your server administrator.");
 			}
 			
-			assert is != null;
 			
 			ItemMeta meta = is.getItemMeta();
 			
 			meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', config.getString(type + "." + icon + ".title")));
-			if(TownyGUI.debug)
-				System.out.println("ICON String:" + icon);
 			meta.setLore(Utils.hideStringInLore(Utils.colorizeStringList(config.getStringList(type + "." + icon + ".lore")), icon));
-			if(TownyGUI.debug)
-				System.out.println("ICON Meta:" + meta.getLore()+ "  " + meta.getLore().get(0));
 			is.setItemMeta(meta);
 			
 			if (config.getBoolean(type + "." + icon + ".enchant_glow"))
@@ -86,7 +83,7 @@ public class IconMenu {
 				TownyMessaging.sendErrorMsg(player, "Please report this error to your server administrator.");
 			}
 		}
-		
+	
 		player.openInventory(inv);
 	}
 }
